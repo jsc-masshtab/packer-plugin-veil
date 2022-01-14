@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../packer-plugin-cloudstack" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../packer-plugin-comment" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../packer-plugin-proxmox" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../proxmox-api-go" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../veil-api-client-go" vcs="Git" />
+  </component>
+</project>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="084e80a5-79f4-4cc8-8414-d0d1b7871810" name="Changes" comment="FEATURE TG-15541 first commit">
+      <change afterPath="$PROJECT_DIR$/../packer-plugin-cloudstack/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../packer-plugin-cloudstack/.idea/packer-plugin-cloudstack.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../packer-plugin-cloudstack/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../packer-plugin-cloudstack/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../packer-plugin-comment/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../packer-plugin-comment/go.sum" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" url="file:///snap/go/current" />
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../veil-api-client-go" value="feature_tg_15541" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="23aV20knhRiWAmY17Yr8fK89lfs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable..is.expanded" value="false" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
+    <property name="go.format.on.save.advertiser.fired" value="true" />
+    <property name="go.formatter.settings.were.checked" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../veil-api-client-go/file_data" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../veil-api-client-go/file_data" />
+      <recent name="$PROJECT_DIR$/../veil-api-client-go/veil" />
+      <recent name="$PROJECT_DIR$/../veil-api-client-go" />
+      <recent name="$PROJECT_DIR$/example" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../veil-api-client-go/veil" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Test.go test veil-api-client-go">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="packer-plugin-veil" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestNewConfig in packer-plugin-veil/builder/veil" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="packer-plugin-veil" />
+      <working_directory value="$PROJECT_DIR$/builder/veil" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="packer-plugin-veil/builder/veil" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestNewConfig\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_ClusterListGet in gitlab.bazalt.team/dev/veil-api-client-go/veil" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="veil-api-client-go" />
+      <working_directory value="$PROJECT_DIR$/../veil-api-client-go/veil" />
+      <root_directory value="$PROJECT_DIR$/../veil-api-client-go" />
+      <kind value="PACKAGE" />
+      <package value="gitlab.bazalt.team/dev/veil-api-client-go/veil" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTest_ClusterListGet\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_DatacenterListGet in gitlab.bazalt.team/dev/veil-api-client-go/veil" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="veil-api-client-go" />
+      <working_directory value="$PROJECT_DIR$/../veil-api-client-go/veil" />
+      <root_directory value="$PROJECT_DIR$/../veil-api-client-go" />
+      <kind value="PACKAGE" />
+      <package value="gitlab.bazalt.team/dev/veil-api-client-go/veil" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTest_DatacenterListGet\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_DomainUpdate in gitlab.bazalt.team/dev/veil-api-client-go/veil" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="veil-api-client-go" />
+      <working_directory value="$PROJECT_DIR$/../veil-api-client-go/veil" />
+      <root_directory value="$PROJECT_DIR$/../veil-api-client-go" />
+      <kind value="PACKAGE" />
+      <package value="gitlab.bazalt.team/dev/veil-api-client-go/veil" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTest_DomainUpdate\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <package value="packer-plugin-veil" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test veil-api-client-go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="veil-api-client-go" />
+      <working_directory value="$PROJECT_DIR$/../veil-api-client-go" />
+      <kind value="DIRECTORY" />
+      <package value="packer-plugin-veil" />
+      <directory value="$PROJECT_DIR$/../veil-api-client-go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.go test veil-api-client-go" />
+        <item itemvalue="Go Test.Test_DomainUpdate in gitlab.bazalt.team/dev/veil-api-client-go/veil" />
+        <item itemvalue="Go Test.Test_DatacenterListGet in gitlab.bazalt.team/dev/veil-api-client-go/veil" />
+        <item itemvalue="Go Test.Test_ClusterListGet in gitlab.bazalt.team/dev/veil-api-client-go/veil" />
+        <item itemvalue="Go Test.TestNewConfig in packer-plugin-veil/builder/veil" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="FEATURE TG-15541 move files to dir veil 2" />
+    <MESSAGE value="FEATURE TG-15541 remove github from go.mod" />
+    <MESSAGE value="FEATURE TG-15541 add gitlab to go.mod" />
+    <MESSAGE value="FEATURE TG-15541 add clusters and datacenters" />
+    <MESSAGE value="FEATURE TG-15541 add domain update" />
+    <MESSAGE value="FEATURE TG-15541 first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="FEATURE TG-15541 first commit" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOINSECURE" value="*.bazalt.team" />
+        <entry key="GOPRIVATE" value="*.bazalt.team" />
+      </map>
+    </environment>
+  </component>
+</project>
