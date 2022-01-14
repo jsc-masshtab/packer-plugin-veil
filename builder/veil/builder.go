@@ -46,9 +46,6 @@ func (b *Builder) Run(ctx context.Context, ui packersdk.Ui, hook packersdk.Hook)
 	// Set the time to wait before timing out
 	//client.AsyncTimeout(int64(b.config.AsyncTimeout.Seconds()))
 
-	// Some veil service providers only allow HTTP GET calls.
-	//client.HTTPGETOnly = b.config.HTTPGetOnly
-
 	// Set up the state.
 	state := new(multistep.BasicStateBag)
 	state.Put("client", client)

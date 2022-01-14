@@ -76,7 +76,6 @@ type FlatConfig struct {
 	ApiUrl                    *string           `mapstructure:"api_url" required:"true" cty:"api_url" hcl:"api_url"`
 	ApiToken                  *string           `mapstructure:"api_token" required:"true" cty:"api_token" hcl:"api_token"`
 	AsyncTimeout              *string           `mapstructure:"async_timeout" required:"false" cty:"async_timeout" hcl:"async_timeout"`
-	HTTPGetOnly               *bool             `mapstructure:"http_get_only" required:"false" cty:"http_get_only" hcl:"http_get_only"`
 	SSLNoVerify               *bool             `mapstructure:"ssl_no_verify" required:"false" cty:"ssl_no_verify" hcl:"ssl_no_verify"`
 	CIDRList                  []string          `mapstructure:"cidr_list" required:"false" cty:"cidr_list" hcl:"cidr_list"`
 	CreateSecurityGroup       *bool             `mapstructure:"create_security_group" required:"false" cty:"create_security_group" hcl:"create_security_group"`
