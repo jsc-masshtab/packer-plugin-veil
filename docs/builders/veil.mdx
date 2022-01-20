@@ -194,25 +194,232 @@ The available variables are:
 
 #### Optional:
 
-@include 'packer-plugin-sdk/communicator/Config-not-required.mdx'
+<!-- Code generated from the comments of the Config struct in communicator/config.go; DO NOT EDIT MANUALLY -->
 
-@include 'packer-plugin-sdk/communicator/SSH-not-required.mdx'
+- `communicator` (string) - Packer currently supports three kinds of communicators:
+  
+  -   `none` - No communicator will be used. If this is set, most
+      provisioners also can't be used.
+  
+  -   `ssh` - An SSH connection will be established to the machine. This
+      is usually the default.
+  
+  -   `winrm` - A WinRM connection will be established.
+  
+  In addition to the above, some builders have custom communicators they
+  can use. For example, the Docker builder has a "docker" communicator
+  that uses `docker exec` and `docker cp` to execute scripts and copy
+  files.
 
-@include 'packer-plugin-sdk/communicator/SSHTemporaryKeyPair-not-required.mdx'
+- `pause_before_connecting` (duration string | ex: "1h5m2s") - We recommend that you enable SSH or WinRM as the very last step in your
+  guest's bootstrap script, but sometimes you may have a race condition
+  where you need Packer to wait before attempting to connect to your
+  guest.
+  
+  If you end up in this situation, you can use the template option
+  `pause_before_connecting`. By default, there is no pause. For example if
+  you set `pause_before_connecting` to `10m` Packer will check whether it
+  can connect, as normal. But once a connection attempt is successful, it
+  will disconnect and then wait 10 minutes before connecting to the guest
+  and beginning provisioning.
 
-@include 'packer-plugin-sdk/communicator/SSH-Key-Pair-Name-not-required.mdx'
+<!-- End of code generated from the comments of the Config struct in communicator/config.go; -->
 
-@include 'packer-plugin-sdk/communicator/SSH-Private-Key-File-not-required.mdx'
 
-@include 'packer-plugin-sdk/communicator/SSH-Agent-Auth-not-required.mdx'
+<!-- Code generated from the comments of the SSH struct in communicator/config.go; DO NOT EDIT MANUALLY -->
+
+- `ssh_host` (string) - The address to SSH to. This usually is automatically configured by the
+  builder.
+
+- `ssh_port` (int) - The port to connect to SSH. This defaults to `22`.
+
+- `ssh_username` (string) - The username to connect to SSH with. Required if using SSH.
+
+- `ssh_password` (string) - A plaintext password to use to authenticate with SSH.
+
+- `ssh_ciphers` ([]string) - This overrides the value of ciphers supported by default by golang.
+  The default value is [
+    "aes128-gcm@openssh.com",
+    "chacha20-poly1305@openssh.com",
+    "aes128-ctr", "aes192-ctr", "aes256-ctr",
+  ]
+  
+  Valid options for ciphers include:
+  "aes128-ctr", "aes192-ctr", "aes256-ctr", "aes128-gcm@openssh.com",
+  "chacha20-poly1305@openssh.com",
+  "arcfour256", "arcfour128", "arcfour", "aes128-cbc", "3des-cbc",
+
+- `ssh_clear_authorized_keys` (bool) - If true, Packer will attempt to remove its temporary key from
+  `~/.ssh/authorized_keys` and `/root/.ssh/authorized_keys`. This is a
+  mostly cosmetic option, since Packer will delete the temporary private
+  key from the host system regardless of whether this is set to true
+  (unless the user has set the `-debug` flag). Defaults to "false";
+  currently only works on guests with `sed` installed.
+
+- `ssh_key_exchange_algorithms` ([]string) - If set, Packer will override the value of key exchange (kex) altorighms
+  supported by default by golang. Acceptable values include:
+  "curve25519-sha256@libssh.org", "ecdh-sha2-nistp256",
+  "ecdh-sha2-nistp384", "ecdh-sha2-nistp521",
+  "diffie-hellman-group14-sha1", and "diffie-hellman-group1-sha1".
+
+- `ssh_certificate_file` (string) - Path to user certificate used to authenticate with SSH.
+  The `~` can be used in path and will be expanded to the
+  home directory of current user.
+
+- `ssh_pty` (bool) - If `true`, a PTY will be requested for the SSH connection. This defaults
+  to `false`.
+
+- `ssh_timeout` (duration string | ex: "1h5m2s") - The time to wait for SSH to become available. Packer uses this to
+  determine when the machine has booted so this is usually quite long.
+  Example value: `10m`.
+
+- `ssh_disable_agent_forwarding` (bool) - If true, SSH agent forwarding will be disabled. Defaults to `false`.
+
+- `ssh_handshake_attempts` (int) - The number of handshakes to attempt with SSH once it can connect. This
+  defaults to `10`.
+
+- `ssh_bastion_host` (string) - A bastion host to use for the actual SSH connection.
+
+- `ssh_bastion_port` (int) - The port of the bastion host. Defaults to `22`.
+
+- `ssh_bastion_agent_auth` (bool) - If `true`, the local SSH agent will be used to authenticate with the
+  bastion host. Defaults to `false`.
+
+- `ssh_bastion_username` (string) - The username to connect to the bastion host.
+
+- `ssh_bastion_password` (string) - The password to use to authenticate with the bastion host.
+
+- `ssh_bastion_interactive` (bool) - If `true`, the keyboard-interactive used to authenticate with bastion host.
+
+- `ssh_bastion_private_key_file` (string) - Path to a PEM encoded private key file to use to authenticate with the
+  bastion host. The `~` can be used in path and will be expanded to the
+  home directory of current user.
+
+- `ssh_bastion_certificate_file` (string) - Path to user certificate used to authenticate with bastion host.
+  The `~` can be used in path and will be expanded to the
+  home directory of current user.
+
+- `ssh_file_transfer_method` (string) - `scp` or `sftp` - How to transfer files, Secure copy (default) or SSH
+  File Transfer Protocol.
+
+- `ssh_proxy_host` (string) - A SOCKS proxy host to use for SSH connection
+
+- `ssh_proxy_port` (int) - A port of the SOCKS proxy. Defaults to `1080`.
+
+- `ssh_proxy_username` (string) - The optional username to authenticate with the proxy server.
+
+- `ssh_proxy_password` (string) - The optional password to use to authenticate with the proxy server.
+
+- `ssh_keep_alive_interval` (duration string | ex: "1h5m2s") - How often to send "keep alive" messages to the server. Set to a negative
+  value (`-1s`) to disable. Example value: `10s`. Defaults to `5s`.
+
+- `ssh_read_write_timeout` (duration string | ex: "1h5m2s") - The amount of time to wait for a remote command to end. This might be
+  useful if, for example, packer hangs on a connection after a reboot.
+  Example: `5m`. Disabled by default.
+
+- `ssh_remote_tunnels` ([]string) - 
+
+- `ssh_local_tunnels` ([]string) - 
+
+<!-- End of code generated from the comments of the SSH struct in communicator/config.go; -->
+
+
+<!-- Code generated from the comments of the SSHTemporaryKeyPair struct in communicator/config.go; DO NOT EDIT MANUALLY -->
+
+- `temporary_key_pair_type` (string) - `dsa` | `ecdsa` | `ed25519` | `rsa` ( the default )
+  
+  Specifies the type of key to create. The possible values are 'dsa',
+  'ecdsa', 'ed25519', or 'rsa'.
+
+- `temporary_key_pair_bits` (int) - Specifies the number of bits in the key to create. For RSA keys, the
+  minimum size is 1024 bits and the default is 4096 bits. Generally, 3072
+  bits is considered sufficient. DSA keys must be exactly 1024 bits as
+  specified by FIPS 186-2. For ECDSA keys, bits determines the key length
+  by selecting from one of three elliptic curve sizes: 256, 384 or 521
+  bits. Attempting to use bit lengths other than these three values for
+  ECDSA keys will fail. Ed25519 keys have a fixed length and bits will be
+  ignored.
+
+<!-- End of code generated from the comments of the SSHTemporaryKeyPair struct in communicator/config.go; -->
+
+
+- `ssh_keypair_name` (string) - If specified, this is the key that will be used for SSH with the
+  machine. The key must match a key pair name loaded up into the remote.
+  By default, this is blank, and Packer will generate a temporary keypair
+  unless [`ssh_password`](#ssh_password) is used.
+  [`ssh_private_key_file`](#ssh_private_key_file) or
+  [`ssh_agent_auth`](#ssh_agent_auth) must be specified when
+  [`ssh_keypair_name`](#ssh_keypair_name) is utilized.
+
+
+- `ssh_private_key_file` (string) - Path to a PEM encoded private key file to use to authenticate with SSH.
+  The `~` can be used in path and will be expanded to the home directory
+  of current user.
+
+
+- `ssh_agent_auth` (bool) - If true, the local SSH agent will be used to authenticate connections to
+  the source instance. No temporary keypair will be created, and the
+  values of [`ssh_password`](#ssh_password) and
+  [`ssh_private_key_file`](#ssh_private_key_file) will be ignored. The
+  environment variable `SSH_AUTH_SOCK` must be set for this option to work
+  properly.
+
 
 ## Http directory configuration
 
-@include 'packer-plugin-sdk/multistep/commonsteps/HTTPConfig.mdx'
+<!-- Code generated from the comments of the HTTPConfig struct in multistep/commonsteps/http_config.go; DO NOT EDIT MANUALLY -->
+
+Packer will create an http server serving `http_directory` when it is set, a
+random free port will be selected and the architecture of the directory
+referenced will be available in your builder.
+
+Example usage from a builder:
+
+  `wget http://{{ .HTTPIP }}:{{ .HTTPPort }}/foo/bar/preseed.cfg`
+
+<!-- End of code generated from the comments of the HTTPConfig struct in multistep/commonsteps/http_config.go; -->
+
 
 ### Optional:
 
-@include 'packer-plugin-sdk/multistep/commonsteps/HTTPConfig-not-required.mdx'
+<!-- Code generated from the comments of the HTTPConfig struct in multistep/commonsteps/http_config.go; DO NOT EDIT MANUALLY -->
+
+- `http_directory` (string) - Path to a directory to serve using an HTTP server. The files in this
+  directory will be available over HTTP that will be requestable from the
+  virtual machine. This is useful for hosting kickstart files and so on.
+  By default this is an empty string, which means no HTTP server will be
+  started. The address and port of the HTTP server will be available as
+  variables in `boot_command`. This is covered in more detail below.
+
+- `http_content` (map[string]string) - Key/Values to serve using an HTTP server. `http_content` works like and
+  conflicts with `http_directory`. The keys represent the paths and the
+  values contents, the keys must start with a slash, ex: `/path/to/file`.
+  `http_content` is useful for hosting kickstart files and so on. By
+  default this is empty, which means no HTTP server will be started. The
+  address and port of the HTTP server will be available as variables in
+  `boot_command`. This is covered in more detail below.
+  Example:
+  ```hcl
+    http_content = {
+      "/a/b"     = file("http/b")
+      "/foo/bar" = templatefile("${path.root}/preseed.cfg", { packages = ["nginx"] })
+    }
+  ```
+
+- `http_port_min` (int) - These are the minimum and maximum port to use for the HTTP server
+  started to serve the `http_directory`. Because Packer often runs in
+  parallel, Packer will choose a randomly available port in this range to
+  run the HTTP server. If you want to force the HTTP server to be on one
+  port, make this minimum and maximum port the same. By default the values
+  are `8000` and `9000`, respectively.
+
+- `http_port_max` (int) - HTTP Port Max
+
+- `http_bind_address` (string) - This is the bind address for the HTTP server. Defaults to 0.0.0.0 so that
+  it will work with any network interface.
+
+<!-- End of code generated from the comments of the HTTPConfig struct in multistep/commonsteps/http_config.go; -->
+
 
 ## Basic Example
 
