@@ -4,6 +4,7 @@ env:
   - CGO_ENABLED=0
 before:
   hooks:
+    - go mod tidy -compat=1.17
     # We strongly recommend running tests to catch any regression before release.
     # Even though, this an optional step.
     - go test ./...
