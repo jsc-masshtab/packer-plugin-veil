@@ -88,7 +88,6 @@ func TestNewConfig(t *testing.T) {
 			Config: map[string]interface{}{
 				"disk_offering":   "f043d193-242f-4941-a847-29408b998711",
 				"disk_size":       "20",
-				"hypervisor":      "KVM",
 				"source_iso":      "fbd904dc-f46c-42e7-a467-f27480c667d5",
 				"source_template": "d31e6af5-94a8-4756-abf3-6493c38db7e5",
 			},
@@ -97,22 +96,13 @@ func TestNewConfig(t *testing.T) {
 		"source_iso_good": {
 			Config: map[string]interface{}{
 				"disk_offering": "f043d193-242f-4941-a847-29408b998711",
-				"hypervisor":    "KVM",
 				"source_iso":    "fbd904dc-f46c-42e7-a467-f27480c667d5",
 			},
 			Err: false,
 		},
 		"source_iso_without_disk_offering": {
 			Config: map[string]interface{}{
-				"hypervisor": "KVM",
 				"source_iso": "fbd904dc-f46c-42e7-a467-f27480c667d5",
-			},
-			Err: true,
-		},
-		"source_iso_without_hypervisor": {
-			Config: map[string]interface{}{
-				"disk_offering": "f043d193-242f-4941-a847-29408b998711",
-				"source_iso":    "fbd904dc-f46c-42e7-a467-f27480c667d5",
 			},
 			Err: true,
 		},

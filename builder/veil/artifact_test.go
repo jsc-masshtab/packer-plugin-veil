@@ -26,6 +26,7 @@ func TestArtifactId(t *testing.T) {
 	//		Id: "286dd44a-ec6b-4789-b192-804f08f04b4c",
 	//	},
 	//}
+	t.SkipNow()
 	client := veil.NewClient("", "", false)
 	config := new(veil.DomainCreateConfig)
 	config.DomainId = templateID
@@ -51,6 +52,7 @@ func TestArtifactString(t *testing.T) {
 	//		Name: "packer-foobar",
 	//	},
 	//}
+	t.SkipNow()
 	client := veil.NewClient("", "", false)
 	config := new(veil.DomainCreateConfig)
 	config.DomainId = templateID

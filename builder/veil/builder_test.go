@@ -23,7 +23,6 @@ func TestBuilder_Prepare(t *testing.T) {
 			Config: map[string]interface{}{
 				"api_url":          "https://veil.com/client/api",
 				"api_token":        "some-api-key",
-				"secret_key":       "some-secret-key",
 				"cidr_list":        []interface{}{"0.0.0.0/0"},
 				"disk_size":        "20",
 				"network":          "c5ed8a14-3f21-4fa9-bd74-bb887fc0ed0d",
