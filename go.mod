@@ -6,9 +6,9 @@ require (
 	github.com/google/uuid v1.3.0
 	github.com/hashicorp/hcl/v2 v2.11.1
 	github.com/hashicorp/packer-plugin-sdk v0.2.11
+	github.com/jsc-masshtab/veil-api-client-go v0.0.3
 	github.com/stretchr/testify v1.7.0
 	github.com/zclconf/go-cty v1.10.0
-	gitlab.bazalt.team/dev/veil-api-client-go v0.0.2
 )
 
 require (

@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	packersdk "github.com/hashicorp/packer-plugin-sdk/packer"
-	"gitlab.bazalt.team/dev/veil-api-client-go/veil"
+	"github.com/jsc-masshtab/veil-api-client-go/veil"
 )
 
 const templateID = "286dd44a-ec6b-4789-b192-804f08f04b4c"

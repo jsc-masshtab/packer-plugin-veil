@@ -2,7 +2,7 @@ package veil
 
 import (
 	"fmt"
-	"gitlab.bazalt.team/dev/veil-api-client-go/veil"
+	"github.com/jsc-masshtab/veil-api-client-go/veil"
 	"log"
 )
 

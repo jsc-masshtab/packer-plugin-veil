@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/packer-plugin-sdk/multistep"
 	"github.com/hashicorp/packer-plugin-sdk/multistep/commonsteps"
 	packersdk "github.com/hashicorp/packer-plugin-sdk/packer"
-	"gitlab.bazalt.team/dev/veil-api-client-go/veil"
+	"github.com/jsc-masshtab/veil-api-client-go/veil"
 )
 
 const BuilderId = "packer.veil"
