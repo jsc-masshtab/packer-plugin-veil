@@ -23,7 +23,7 @@ packer {
   required_plugins {
     veil = {
       version = ">= 1.0.0"
-      source  = "github.com/slashburygin/veil"
+      source  = "github.com/jsc-masshtab/veil"
     }
   }
 }
