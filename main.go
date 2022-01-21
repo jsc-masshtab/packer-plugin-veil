@@ -5,10 +5,8 @@ import (
 	"os"
 
 	"github.com/hashicorp/packer-plugin-sdk/plugin"
-
 	//"github.com/hashicorp/packer-plugin-veil/builder/veil"
 	//"github.com/hashicorp/packer-plugin-veil/version"
-
 	"packer-plugin-veil/builder/veil"
 	"packer-plugin-veil/version"
 )
