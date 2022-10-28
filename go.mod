@@ -8,7 +8,7 @@ require (
 	github.com/hashicorp/packer-plugin-sdk v0.2.11
 	github.com/jsc-masshtab/veil-api-client-go v0.0.3
 	github.com/stretchr/testify v1.7.0
-	github.com/zclconf/go-cty v1.10.0
+	github.com/zclconf/go-cty v1.12.0
 )
 
 require (
